@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Grade Manager | Vibrant UI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              kanit: ['Kanit', 'sans-serif'],
+            },
+            colors: {
+              primary: {
+                light: '#4DB6AC',
+                DEFAULT: '#26A69A',
+                dark: '#00796B',
+              },
+              secondary: {
+                light: '#DCEDC8',
+                DEFAULT: '#AED581',
+                dark: '#7CB342',
+              },
+              accent: {
+                purple: '#7E57C2',
+                pink: '#EC407A',
+                blue: '#42A5F5',
+                indigo: '#3F51B5',
+              },
+              warning: '#FFCA28',
+              orange: '#FF8A65',
+              danger: '#EF5350',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body { 
+        font-family: 'Kanit', sans-serif; 
+        background: #f8fafc;
+        background-image: 
+          radial-gradient(at 0% 0%, rgba(38, 166, 154, 0.15) 0px, transparent 50%),
+          radial-gradient(at 100% 0%, rgba(236, 64, 122, 0.1) 0px, transparent 50%),
+          radial-gradient(at 100% 100%, rgba(126, 87, 194, 0.1) 0px, transparent 50%),
+          radial-gradient(at 0% 100%, rgba(255, 202, 40, 0.1) 0px, transparent 50%);
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+      .sidebar-glass {
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(40px);
+        -webkit-backdrop-filter: blur(40px);
+      }
+      .hide-scrollbar::-webkit-scrollbar { display: none; }
+      .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      
+      @keyframes float {
+        0% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-10px) rotate(2deg); }
+        100% { transform: translateY(0px) rotate(0deg); }
+      }
+      .floating { animation: float 5s ease-in-out infinite; }
+      
+      .gradient-text {
+        background: linear-gradient(135deg, #26A69A 0%, #7E57C2 50%, #EC407A 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .menu-active-primary { background: linear-gradient(135deg, #26A69A 0%, #00BFA5 100%); }
+      .menu-active-secondary { background: linear-gradient(135deg, #AED581 0%, #7CB342 100%); }
+      .menu-active-orange { background: linear-gradient(135deg, #FF8A65 0%, #FF5722 100%); }
+      .menu-active-warning { background: linear-gradient(135deg, #FFCA28 0%, #FFB300 100%); }
+      .menu-active-danger { background: linear-gradient(135deg, #EF5350 0%, #D32F2F 100%); }
+      .menu-active-purple { background: linear-gradient(135deg, #7E57C2 0%, #5E35B1 100%); }
+      .menu-active-pink { background: linear-gradient(135deg, #EC407A 0%, #C2185B 100%); }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "sweetalert2": "https://esm.sh/sweetalert2@^11.26.17"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="text-gray-800">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

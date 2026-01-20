@@ -1,0 +1,5 @@
+{
+  "name": "Smart Grade Manager",
+  "description": "A comprehensive school grade management system featuring role-based access for administrators, teachers, and students with real-time analytics and local storage persistence.",
+  "requestFramePermissions": []
+}
